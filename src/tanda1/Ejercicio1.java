@@ -19,7 +19,7 @@ public class Ejercicio1 extends JFrame implements ActionListener{
 	
 	public Ejercicio1()
 	{
-		mayus=new tipoMayus();
+		mayus=new tipoMayus(this);
 		setTitle("Probando....");
 		
 		//Zona Norte
@@ -87,10 +87,24 @@ public class Ejercicio1 extends JFrame implements ActionListener{
 		
 		if(e.getSource()==mayusculas)
 		{
+			
 			mayus.setVisible(true);
 		}
 		
 	}
+
+	
+	
+	public String getAreatxt() {
+		return areatxt.getText();
+	}
+
+	
+
+	public void setAreatxt(String texto) {
+		areatxt.setText(texto);
+	}
+
 
 	public static void main(String[] args) {
 		
